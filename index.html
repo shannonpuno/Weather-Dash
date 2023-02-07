@@ -24,58 +24,45 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4 bg-light">
-                <h3 class="search-bar">Search for a City:</h3>
+                <h3 class="search-bar text-md-left">Search for a City:</h3>
                 <div class="input-group input-group-sm mb-3">
-                    <input type="text" class="form-control" id="city-input" placeholder="Enter City name">
+                    <input type="text" class="form-control" id="search-input" placeholder="Enter City name">
                         <div class="input-group-prepend">
-                            <button type="button" class="btn btn-primary" id="search-btn">
-                                <i class="fas fa-search"></i>
-                            </button>
+                            <button type="click" class="btn btn-outline-secondary" id="search-btn">Search</button>
                         </div>
                 </div>
+                 <!--Search History Lists the Cities-->
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <div class="card" id="search-history">
+                            <div class="card-header">Previous Searches</div>
+                            <!--Empty Div displays search history-->
+                            <div class="card-body" id="list-history"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!--Search History Lists the Cities-->
-            <div class="row mt-3">
+            <!--Current City Weather Box id="weatherBox"-->
+            <div class="card text-bg-light mb-3 col-sm-8" id="weatherBox">
                 <div class="col-12">
-                    <ul class="list-group" id="search-history">
-                    </ul>
+                     <div class="card-header">
+                        <!--Empty Div for Current City-->
+                        <div id="current-city"></div>
+                    </div>
+                    <div class="card-body">
+                        <!--Empty ul Displays current weather-->
+                        <ul id="current-conditions">
+
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <!--Current City Weather Box-->
-            <div class="col-sm-8" id="weatherBox">
-                <div class="row">
-                    <div class="col-12 border border-dark m-3 rounded">
-                        <span class="text-md-left" id="city"></span>
-                        <img id="icon" alt="">
-                        <!--Input for Temp, humidity, and wind speed-->
-                        <div class="col-12">
-                            <h6 class="text-md-left bg-light" id="temp-input"></h6>
-                        </div>
-                        <div class="col-12">
-                            <h6 class="text-md-left bg-light" id="hum-input"></h6>
-                        </div>
-                        <div class="col-12">
-                            <h6 class="text-md-left bg-light" id="wind-input"></h6>
-                        </div>
-                    </div>
                      <!--5-Day Forecast Cards-->
-                    <div class="col-12 ml-2">
-                        <h3 class= "bg-light">5-Day Forecast:</h3>
-                    </div>
-                    <div class="row-cols-3">
-                        <div class="card border border-dark ml-3 mb-3 rounded"></div>
-                    </div>
-                    <div class="row-cols-3">
-                        <div class="card border border-dark ml-3 mb-3 rounded"></div>
-                    </div>
-                    <div class="row-cols-3">
-                        <div class="card border border-dark ml-3 mb-3 rounded"></div>
-                    </div>
-                    <div class="row-cols-3">
-                        <div class="card border border-dark ml-3 mb-3 rounded"></div>
-                    </div>
-                    <div class="row-cols-3">
-                        <div class="card border border-dark ml-3 mb-3 rounded"></div>
+                    <div class="col-12 mt-3">
+                        <h3 class= "bg-light">5-Day Forecast</h3>
+                        <!--Empty Div displays 5 Day Forecast-->
+                        <div class="p-2" id="futureWeather">
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -85,5 +72,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/script.js"></script>
 </body>
 </html>
